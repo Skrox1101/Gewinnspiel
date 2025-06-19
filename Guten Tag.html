@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="li">
+<head>
+  <meta charset="UTF-8">
+  <title>Fake Login (Simulation)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      padding-top: 100px;
+    }
+    .login-box {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      width: 300px;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    input[type="text"], input[type="password"] {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    .warning {
+      margin-top: 20px;
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Anmeldung für 5000CHF die Woche</h2>
+    <form onsubmit="showWarning(); return false;">
+      <input type="text" placeholder="Benutzername" required><br>
+      <input type="password" placeholder="Passwort" required><br>
+      <input type="submit" value="Login">
+    </form>
+    <div class="warning" id="warning" style="display:none;">
+      Achtung: Die Anmeldung hat nicht funktioniert!<br>
+      Schicken sie eine E-Mail an Hacker018@hotmail.com mit ihren Persöhnlichen Daten.
+    </div>
+  </div>
+
+  <script>
+    function showWarning() {
+      document.getElementById('warning').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
